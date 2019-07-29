@@ -12,7 +12,6 @@ for (i = 0; i < setOfNumbers.length - 1; i++) {
         }
     }
     console.log('The sorted set after ', i+1, ' passes = ', setOfNumbers);
-
 }
   
 console.log('The sorted set of numbers = ', setOfNumbers);
