@@ -13,3 +13,8 @@ Bubble Sort is an algorithm that allows a list of elements to be put into order.
 
 ### Commands
 * `npm start` - runs the project
+
+### Video
+
+[![Bubble Sort Video](http://img.youtube.com/vi/T-14OjQE1uc/0.jpg)](http://www.youtube.com/watch?v=T-14OjQE1uc)
+
