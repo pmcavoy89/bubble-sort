@@ -14,7 +14,7 @@ Bubble Sort is an algorithm that allows a list of elements to be put into order.
 Coming Soon
 
 ## JavaScript Code
-Check out the code on [GitHub](../bubble-sort.js).
+Check out the code on [GitHub](https://github.com/pmcavoy89/bubble-sort/blob/master/bubble-sort.js). Hopefully I can update to include the snippet in the page here soon.
 
 ### JavaScript Code Walkthrough Video
 
