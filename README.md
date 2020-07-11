@@ -1,6 +1,5 @@
-# Bubble Sort
-Small project to demonstrate bubble sort in JavaScript. The repository is used for my blog at [Programming Pat](https://www.programmingpat.com).
+# bubble-sort
+Small project that demonstrates bubble sort. Check out the walkthrough [here](https://pmcavoy89.github.io/bubble-sort/) on my site.
 
-### Commands
-* `npm start` - runs the project
-
+## Commands
+* `npm start` - runs a sample sort.
