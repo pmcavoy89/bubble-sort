@@ -1,5 +1,4 @@
 # Introduction
-
 Bubble Sort is an algorithm that allows a list of elements to be put into order. This is done by swapping the elements that are out of order. Given a size of n elements, the algorithm runs O(n)^2 time.
 
 ## Pseudo Code
@@ -11,9 +10,10 @@ Bubble Sort is an algorithm that allows a list of elements to be put into order.
 ```
 
 ### Video
-## JavaScript Code
-
 ### JavaScript Code Walkthrough Video
 
 [![Bubble Sort Video](https://img.youtube.com/vi/T-14OjQE1uc/0.jpg)](https://www.youtube.com/watch?v=T-14OjQE1uc)
+
+## Code
+Check out the code on [GitHub](https://github.com/pmcavoy89/bubble-sort/blob/master/bubble-sort.js). Hopefully I can update to include the snippet in the page here soon.
 
