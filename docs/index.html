@@ -14,7 +14,10 @@ featured_image: /images/bubble-sort.jpg
 	<div class="wrap">
 		<h1>Bubble Sort</h1>
 		<p>
-			Bubble Sort is an algorithm that allows a list of elements to be put into order. This is done by swapping the element that are out of order. Given a size of n elements, the algorithm runs O(n)^2 time.
+			Bubble Sort is an algorithm that allows a list of elements to be put into sorted order. This is done by swapping the element that are out of order.
+		</p>
+		<p>
+			Given a size of n elements, the algorithm runs O(n)^2 time. Let's take a look at what that means.
 		</p>
 	</div>
 
@@ -25,15 +28,71 @@ featured_image: /images/bubble-sort.jpg
 	<div class="wrap">
 
 		<article class="single-post">
-		
 			<h3>
-				Pseudo-code
+				Inputs
+			</h3>
+			<p>
+				<b>Example List Input</b>: [0, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+			</p>
+			<p>
+				So, let's break down what the input is for Bubble Sort. It's any unordered list, I mean, why sort something that is already sorted? I've never done that... 😅 (Okay, maybe I have, I didn't read the SQL!)
+			</p>
+			<p>
+				All jokes aside, Bubble Sort is a quick way to sort small data sets. Other sorting algorithms are more wisely used, but most of the time, let the tool you're using to do it for you.
+			</p>
+			<p>
+				<b>Key Points</b>:
+				<ul>
+					<li>
+						Unordered List
+					</li>
+					<li>
+						Number of elements to be small
+					</li>
+					<li>
+						Not efficient
+					</li>
+					<li>
+						Quick and easy (but there's other approaches)
+					</li>
+				</ul>
+			</p>
+			<h3>
+				Outputs
+			</h3>
+			<p>Taking the example list above we should get one like this.</p>
+			<p>
+				<b>Example List Output</b>: [0, 1, 2, 3, 4, 5, 6, 7,8, 9]
+			</p>
+			<p>
+				Pretty simple as a human, we know the order by seeing it. With computers, we need to tell it a set of instructions to follow so that it gets the results we want. So, let's write the process down in English and then we'll break down how to write the code later.
+			</p>
+			<h3>
+				Pseudo-code -- TODO: Write a break down of each step
 			</h3>
 			<blockquote>
-				Step 1. Something something something</br>
-			
-				Step 2. Something 2
+				Step 1. Start at 1 for an index, called i.
 			</blockquote>
+			<blockquote>
+				Step 2. Given a list of elements, called e. While I is less than the length of e, do the following for each element in the list.
+			</blockquote>
+			<blockquote>
+				Step 3. For an index, j, start at 1. While j is less than the length of e - I, do the following;
+			</blockquote>
+			<blockquote>
+				Step 4. If the element at e[j] is less than e[j + 1], then swap the values.
+			</blockquote>
+
+			<h3>
+				Example -- TODO: Walk through of the example steps with a sample list.
+			</h3>
+
+			<h3>
+				Big O(n) -- TODO: Break down why notation is O(n)^2 and consider giving Big O Notation it's own page for algorithms
+			</h3>
+			<p>
+				Let's take a look at the Big O notation.
+			</p>
 			
 		</article>
 
