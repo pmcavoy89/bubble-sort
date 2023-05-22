@@ -10,14 +10,14 @@ menu_settings:
   menu_items:
     - title: 'Home'
       url: '/'
-    - title: 'Blog'
-      url: '/blog/'
+    # - title: 'Blog'
+    #   url: '/blog/'
     # - title: 'Projects'
     #   url: '/projects'
-    - title: 'About'
-      url: '/about'
-    - title: 'Contact'
-      url: '/contact'
+    - title: 'Features'
+      url: '/features'
+    # - title: 'Contact'
+    #   url: '/contact'
 
 footer_settings:
   footer_tagline: Let's get learning.
