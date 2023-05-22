@@ -1,12 +1,13 @@
 function bubbleSort(setOfNumbers) {
-    let i, j, temp;
+    let outerIndexKeeper, innerIndexKeeper, theSwappingValue;
 
-    for (i = 0; i < setOfNumbers.length - 1; i++) {
-        for (j = 0; j < setOfNumbers.length - i - 1; j++) {
-            if(setOfNumbers[j] > setOfNumbers[j+1]) {
-                temp = setOfNumbers[j];
-                setOfNumbers[j] = setOfNumbers[j+1];
-                setOfNumbers[j+1] = temp; 
+    for (outerIndexKeeper = 0; outerIndexKeeper < setOfNumbers.length - 1; outerIndexKeeper++) {
+
+        for (innerIndexKeeper = 0; innerIndexKeeper < setOfNumbers.length - outerIndexKeeper - 1; innerIndexKeeper++) {
+            if(setOfNumbers[innerIndexKeeper] > setOfNumbers[innerIndexKeeper+1]) {
+                theSwappingValue = setOfNumbers[innerIndexKeeper];
+                setOfNumbers[innerIndexKeeper] = setOfNumbers[innerIndexKeeper+1];
+                setOfNumbers[innerIndexKeeper+1] = theSwappingValue; 
             }
         }
     }

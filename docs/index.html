@@ -5,115 +5,169 @@ description: A tutorial to learn bubble sort.
 featured_image: /images/bubble-sort.jpg
 ---
 
+<!-- TODO: Translate the Bubble Sort page into a markdown file. Too much HTML.
+---
+layout: default
+---
+<div class="home">
+  {% capture index %}{% include index.md %}{% endcapture %}
+  {{ index | markdownify }}    
+</div>
+-->
+
 <section class="hero">
 
-	<div class="hero__image" style="background-image: url({{ page.featured_image | relative_url }})">
-		<div class="hero__overlay"></div>
-	</div>
+    <div class="hero__image" style="background-image: url({{ page.featured_image | relative_url }})">
+        <div class="hero__overlay"></div>
+    </div>
 
-	<div class="wrap">
-		<h1>Bubble Sort</h1>
-		<p>
-			Bubble Sort is an algorithm that allows a list of elements to be put into sorted order. This is done by swapping the element that are out of order.
-		</p>
-		<p>
-			Given a size of n elements, the algorithm runs O(n)^2 time. Let's take a look at what that means.
-		</p>
-	</div>
+    <div class="wrap">
+        <h1>Bubble Sort</h1>
+        <p>
+            Bubble Sort is an algorithm that allows a list of elements to be put into sorted order. This is done by swapping the element(s) that are out of order. A great way to think about what we're going to see below is that the bigger values <em>sink</em> while the smaller values <em>bubble</em> up to the top.
+        </p>
+        <p>
+            Given a size of n elements, the algorithm runs O(n)^2 time. Let's take a look at what that means.
+        </p>
+    </div>
 
 </section>
 
 <section class="listing">
 
-	<div class="wrap">
+    <div class="wrap">
 
-		<article class="single-post">
-			<h3>
-				Inputs
-			</h3>
-			<p>
-				<b>Example List Input</b>: [0, 9, 8, 7, 6, 5, 4, 3, 2, 1]
-			</p>
-			<p>
-				So, let's break down what the input is for Bubble Sort. It's any unordered list, I mean, why sort something that is already sorted? I've never done that... 😅 (Okay, maybe I have, I didn't read the SQL!)
-			</p>
-			<p>
-				All jokes aside, Bubble Sort is a quick way to sort small data sets. Other sorting algorithms are more wisely used, but most of the time, let the tool you're using to do it for you.
-			</p>
-			<p>
-				<b>Key Points</b>:
-				<ul>
-					<li>
-						Unordered List
-					</li>
-					<li>
-						Number of elements to be small
-					</li>
-					<li>
-						Not efficient
-					</li>
-					<li>
-						Quick and easy (but there's other approaches)
-					</li>
-				</ul>
-			</p>
-			<h3>
-				Outputs
-			</h3>
-			<p>Taking the example list above we should get one like this.</p>
-			<p>
-				<b>Example List Output</b>: [0, 1, 2, 3, 4, 5, 6, 7,8, 9]
-			</p>
-			<p>
-				Pretty simple as a human, we know the order by seeing it. With computers, we need to tell it a set of instructions to follow so that it gets the results we want. So, let's write the process down in English and then we'll break down how to write the code later.
-			</p>
-			<h3>
-				Pseudo-code
-			</h3>
-			<p>
-				TODO: Write a break down of each step
-			</p>
-			<blockquote>
-				Step 1. Start at 1 for an index, called i.
-			</blockquote>
-			<blockquote>
-				Step 2. Given a list of elements, called e. While I is less than the length of e, do the following for each element in the list.
-			</blockquote>
-			<blockquote>
-				Step 3. For an index, j, start at 1. While j is less than the length of e - I, do the following;
-			</blockquote>
-			<blockquote>
-				Step 4. If the element at e[j] is less than e[j + 1], then swap the values.
-			</blockquote>
+        <article class="single-post">
+            <h3>
+                Inputs
+            </h3>
+            <p>
+                <b>Example List Input</b>: <code>[ 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 ]</code>
+            </p>
+            <p>
+                So, let's breakdown what the input is for Bubble Sort. It's any unordered list, I mean, why sort something that is already sorted? I've never done that... (Okay, maybe I have. I didn't read the SQL! Whoops. 😅)
+            </p>
+            <p>
+                All jokes aside, Bubble Sort is a quick way to sort small data sets. Other sorting algorithms are more wisely used, but most of the time, let the language you're using to do it for you. This doesn't excuse you from knowing different use cases that we'll discuss in the <a href="">Big O Notation</a> post.
+            </p>
+            <p>
+                <b>Key Points</b>:
+            <ul>
+                <li>
+                    Unordered List
+                </li>
+                <li>
+                    Number of elements, in the list, should be small
+                </li>
+                <li>
+                    Inefficient
+                </li>
+                <li>
+                    Quick and easy to write
+                </li>
+            </ul>
+            </p>
+            <h3>
+                Outputs
+            </h3>
+            <p>Taking the example list above we should get one like this.</p>
+            <p>
+                <b>Example List Output</b>: <code>[ 1, 2, 3, 4, 5, 6, 7,8, 9, 10 ]</code>
+            </p>
+            <p>
+                Pretty simple as a human, we know the order by seeing it. With computers, we need to tell it a set of instructions to follow so that it gets the results we want. So, let's write the process down in English and then we'll break down how to write the code later.
+            </p>
+            <h3>
+                Pseudo-code
+            </h3>
+            <blockquote>
+                Step 1. Given an unordered list, ex. <code>[ 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 ]</code>, call it <code>setOfNumbers</code>.
+            </blockquote>
+            <p>
+                So this can be any unordered list. I use the above list as an example to easily demonstrate the <b>Bubble Sort</b> algorithm.
+            </p>
+            <blockquote>
+                Step 2. Create three variables called; <code>outerIndexKeeper</code>, <code>innerIndexKeeper</code>, and <code>theSwappingValue</code>. Set both indexKeepers to start at the first element in the list.
+            </blockquote>
+            <p>
+                <code>outerIndexKeeper</code> and <code>innerIndexKeeper</code>: start at the first index, zero (0), for both variables because that's where most array <a title="an indicator, sign, or measure of something. AKA: Plural of index">indices</a> start in programming languages.
+            </p>
+            <p>
+                <code><b>Note</b></code>: Hover over <em>indices</em> to see the definition (or tap for mobile)!
+            </p>
+            <p>
+                Well, why do we have these <em>*IndexKeepers</em>? We need to loop through the array multiple times to ensure the elements are in the right order. This is because <code>outerIndexKeeper</code> makes sure we look at each element in the list and <code>innerIndexKeeper</code> ensures we continue to bubble up the smaller values (and have the bigger values sink to the end/bottom of the list).
+            </p>
+            <p>
+                <code>theSwappingValue</code>: This variable is to temporarily, <code>temp</code> for short, store one value that we need to switch when the higher index's value is less than the lower index's value. So, this allows us to switch the order of the values without losing one in the process. We'll see how that works below. 
+            </p>
+            <p>
+                <b><code>Note</code></b>: If we wanted this to be in descending order, we'd check if the higher index's value is greater 
+            </p>
+            <blockquote>
+                Step 3. Given a list of elements called <code>setOfNumbers</code>, for each element in the list check to make sure it is in the right order, incrementing <code>outerIndexKeeper</code>.
+            </blockquote>
+            <p>
+                This step ensures that each item is being checked for correct order. Because lists start at index 0, we need to go to <code>setOfNumbers-1</code>, to look at each item in the list. In the following step, we will actually do the comparison to determine if a swap is needed.  
+            </p>
+            <blockquote>
+                Step 4. Given a list of elements called <code>setOfNumbers</code>, for each element minus the <code>outerIndexKeeper</code> minus 1, check if we need to swap values.
+            </blockquote>
+            <p>
+                This is the inner loop. The inner loop controls that the largest is sorted to the end of the list. We subtract <code>outerIndexKeeper</code> because it ensures we don't check an element that we've already sorted after the first pass.
+            </p>
+            <p>
+                The additional minus 1 to ensure that we stay within the bounds of the array on our first pass since the last element is going to be checked if it needs to be swapped or not when we get to the second to last element of the list.
+            </p>
+            <p>
+                TODO: Link to an article that does a deep dive and illustrates this.
+            </p>
+            <p>
+                Let's take a look at what the swap looks like next.
+            </p>
+            <blockquote>
+                Step 5. If <code>setOfNumbers[innerIndexKeeper]</code> is <em>less than</em> <code>setOfNumbers[innerIndexKeeper+1]</code>, then assign <code>theSwappingValue</code> to <code>setOfNumbers[innerIndexKeeper]</code>, <code>setOfNumbers[innerIndexKeeper]</code> to <code>setOfNumbers[innerIndexKeeper+1]</code> and <code>setOfNumbers[innerIndexKeeper+1]</code> to <code>theSwappingValue</code>.
+            </blockquote>
+            <p>
+                Okay, let's break this down a bit. There's two major things going on here. One is the condition check if the elements should be swapped. The other, does the swapping of the values.
+            </p>
+            <p>
+                The conditional check is where we make the decision if two values need to switch positions in the list. This is where <code>theSwappingValue</code> comes into play. The role of the variable is to help us not lose one of the values that we need to swap.
+            </p>
+            <p>
+                If we didn't have <code>theSwappingValue</code>, it'd be like us forgetting the values we were swapping in our short term memory. Computers can't just <em>look up</em> (like we can with our eyes) a value once it has been change.
+            </p>
+            <p>
+                TODO: Should I expand upon how to make <b>Bubble Sort</b> do ascending/descending?
+            </p>
+            <h3>
+                Example
+            </h3>
+            <p>
+                TODO: Walk through of the example steps with a sample list.
+            </p>
+            <h3>
+                Big O(n)
+            </h3>
+            <p>
+                TODO: Break down why notation is O(n)^2 and consider giving Big O Notation it's own page for algorithms
+            </p>
+            <p>
+                Let's take a look at the Big O notation.
+            </p>
+            <h3>
+                Video Walkthrough
+            </h3>
+            <p>
+                TODO: Need to center video
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/T-14OjQE1uc"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </p>
 
-			<h3>
-				Example
-			</h3>
-			<p>
-				TODO: Walk through of the example steps with a sample list.
-			</p>
-			<h3>
-				Big O(n)
-			</h3>
-			<p>
-				TODO: Break down why notation is O(n)^2 and consider giving Big O Notation it's own page for algorithms
-			</p>
-			<p>
-				 Let's take a look at the Big O notation.
-			</p>
-			<h3>
-				Video Walkthrough
-			</h3>
-			<p>
-				TODO: Need to center video
-				<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/T-14OjQE1uc" title="YouTube video player"
-					frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-					allowfullscreen></iframe>
-			</p>
-			
-		</article>
+        </article>
 
-	</div>
+    </div>
 
 </section>
