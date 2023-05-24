@@ -15,6 +15,8 @@ This page also intends to help communicate my milestones and where I feel they a
     - ✅ Inputs
     - ✅ Outputs
     - ✅ Pseudo-code
+        - 💭 Walkthrough?
+        - 💭 Gifs?
     - 🔄 Example
         - 💭 Video walkthrough - Playing Cards?
     -  🟨 Code 
@@ -26,4 +28,4 @@ This page also intends to help communicate my milestones and where I feel they a
         - 💭 Video walkthrough
     - 💭 Complete Video Walkthrough
         - 💭 Playlist of the videos in correct order
-    - 💭 Playground ?
+    - 💭 Playground ? 

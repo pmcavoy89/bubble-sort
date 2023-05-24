@@ -73,15 +73,20 @@ featured_image: /images/bubble-sort.jpg
             <h3>
                 Pseudo-code
             </h3>
-            <blockquote>
-                Step 1. Given an unordered list, ex. <code>[ 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 ]</code>, call it <code>setOfNumbers</code>.
-            </blockquote>
+            <p>
+                <code>
+                    Step 1. Given an unordered list, ex. <code>[ 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 ]</code>, call it <code>setOfNumbers</code>.
+                </code>
+            </p>
             <p>
                 So this can be any unordered list. I use the above list as an example to easily demonstrate the <b>Bubble Sort</b> algorithm.
             </p>
-            <blockquote>
-                Step 2. Create three variables called; <code>outerIndexKeeper</code>, <code>innerIndexKeeper</code>, and <code>theSwappingValue</code>. Set both indexKeepers to start at the first element in the list.
-            </blockquote>
+            <p>
+                <code>
+                    Step 2. Create three variables called; <b>outerIndexKeeper</b>, <b>innerIndexKeeper</b>, and
+                    <b>theSwappingValue</b>. Set both indexKeepers to start at the first element in the list.
+                </code>
+            </p>
             <p>
                 <code>outerIndexKeeper</code> and <code>innerIndexKeeper</code>: start at the first index, zero (0), for both variables because that's where most array indices start in programming languages.
             </p>
@@ -94,15 +99,19 @@ featured_image: /images/bubble-sort.jpg
             <p>
                 <b><code>Note</code></b>: If we wanted this to be in descending order, we'd check if the higher index's value is greater 
             </p>
-            <blockquote>
-                Step 3. Given a list of elements called <code>setOfNumbers</code>, for each element in the list check to make sure it is in the right order, incrementing <code>outerIndexKeeper</code>.
-            </blockquote>
+            <p>
+                <code>
+                    Step 3. Given a list of elements called <b>setOfNumbers</b>, for each element in the list check to make sure it is in the right order, incrementing <b>outerIndexKeeper</b>.
+                </code>
+            </p>
             <p>
                 This step ensures that each item is being checked for correct order. Because lists start at index 0, we need to go to <code>setOfNumbers-1</code>, to look at each item in the list. In the following step, we will actually do the comparison to determine if a swap is needed.  
             </p>
-            <blockquote>
-                Step 4. Given a list of elements called <code>setOfNumbers</code>, for each element minus the <code>outerIndexKeeper</code> minus 1, check if we need to swap values.
-            </blockquote>
+            <p>
+                <code>
+                    Step 4. Given a list of elements called <b>setOfNumbers</b>, for each element minus the <b>outerIndexKeeper</b> minus 1, check if we need to swap values.
+                </code>
+            </p>
             <p>
                 This is the inner loop. The inner loop controls that the largest is sorted to the end of the list. We subtract <code>outerIndexKeeper</code> because it ensures we don't check an element that we've already sorted after the first pass.
             </p>
@@ -110,14 +119,13 @@ featured_image: /images/bubble-sort.jpg
                 The additional minus 1 to ensure that we stay within the bounds of the array on our first pass since the last element is going to be checked if it needs to be swapped or not when we get to the second to last element of the list.
             </p>
             <p>
-                TODO: Link to an article that does a deep dive and illustrates this.
-            </p>
-            <p>
                 Let's take a look at what the swap looks like next.
             </p>
-            <blockquote>
-                Step 5. If <code>setOfNumbers[innerIndexKeeper]</code> is <em>less than</em> <code>setOfNumbers[innerIndexKeeper+1]</code>, then assign <code>theSwappingValue</code> to <code>setOfNumbers[innerIndexKeeper]</code>, <code>setOfNumbers[innerIndexKeeper]</code> to <code>setOfNumbers[innerIndexKeeper+1]</code> and <code>setOfNumbers[innerIndexKeeper+1]</code> to <code>theSwappingValue</code>.
-            </blockquote>
+            <p>
+                <code>
+                    Step 5. If <b>setOfNumbers[innerIndexKeeper]</b> is <em>less than</em> <b>setOfNumbers[<em>innerIndexKeeper+1</em>]</b>, then assign <b>theSwappingValue</b> to <b>setOfNumbers[innerIndexKeeper]</b>, <b>setOfNumbers[innerIndexKeeper]</b> to <b>setOfNumbers[<em>innerIndexKeeper+1</em>]</b> and <b>setOfNumbers[<em>innerIndexKeeper+1</em>]</b> to <b>theSwappingValue</b>.
+                </code>
+            </p>
             <p>
                 Okay, let's break this down a bit. There's two major things going on here. One is the condition check if the elements should be swapped. The other, does the swapping of the values.
             </p>

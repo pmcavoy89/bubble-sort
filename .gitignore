@@ -8,3 +8,14 @@ node_modules/
 
 # Editor
 .vscode
+
+# Jest
+coverage/
+
+# Jekyll
+_site
+.jekyll-cache
+samples
+images/demo
+.DS_Store
+**/.DS_Store
