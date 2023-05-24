@@ -14,7 +14,7 @@ featured_image: /images/bubble-sort.jpg
     <div class="wrap">
         <h1>Bubble Sort</h1>
         <p>
-            Bubble Sort is an algorithm that allows a list of elements to be put into sorted order. This is done by swapping the element(s) that are out of order. A great way to think about what we're going to see below is that the bigger values <em>sink</em> while the smaller values <em>bubble</em> up to the top.
+            <em>Bubble Sort</em> is an algorithm that allows a list of elements to be put into sorted order. This is done by swapping the element(s) that are out of order. A great way to think about what we're going to see below is that the bigger values <em>sink</em> while the smaller values <em>bubble</em> up to the top.
         </p>
         <p>
             Given a size of n elements, the algorithm runs O(n)^2 time. Let's take a look at what that means.
@@ -38,10 +38,10 @@ featured_image: /images/bubble-sort.jpg
                 <b>Example List Input</b>: <code>[ 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 ]</code>
             </p>
             <p>
-                So, let's breakdown what the input is for Bubble Sort. It's any unordered list, I mean, why sort something that is already sorted? I've never done that... (Okay, maybe I have. I didn't read the SQL! Whoops. 😅)
+                So, let's breakdown what the input is for <em>Bubble Sort</em>. It's any unordered list, I mean, why sort something that is already sorted? I've never done that... (Okay, maybe I have. I didn't read the SQL! Whoops. 😅)
             </p>
             <p>
-                All jokes aside, Bubble Sort is a quick way to sort small data sets. Other sorting algorithms are more wisely used, but most of the time, let the language you're using to do it for you. This doesn't excuse you from knowing different use cases that we'll discuss in the <a href="">Big O Notation</a> post.
+                All jokes aside, <em>Bubble Sort</em> is a quick way to sort small data sets. Other sorting algorithms are more wisely used, but most of the time, let the language you're using to do it for you. This doesn't excuse you from knowing different use cases that we'll discuss in the <a href="">Big O Notation</a> post.
             </p>
             <p>
                 <b>Key Points</b>:
@@ -79,7 +79,7 @@ featured_image: /images/bubble-sort.jpg
                 </code>
             </p>
             <p>
-                So this can be any unordered list. I use the above list as an example to easily demonstrate the <b>Bubble Sort</b> algorithm.
+                So this can be any unordered list. I use the above list as an example to easily demonstrate the <em>Bubble Sort</em> algorithm.
             </p>
             <p>
                 <code>
@@ -136,7 +136,7 @@ featured_image: /images/bubble-sort.jpg
                 If we didn't have <code>theSwappingValue</code>, it'd be like us forgetting the values we were swapping in our short term memory. Computers can't just <em>look up</em> (like we can with our eyes) a value once it has been change.
             </p>
             <p>
-                TODO: Should I expand upon how to make <b>Bubble Sort</b> do ascending/descending?
+                TODO: Should I expand upon how to make <em>Bubble Sort</em> do ascending/descending?
             </p>
             <h3>
                 Example
@@ -168,7 +168,41 @@ featured_image: /images/bubble-sort.jpg
                 Tests
             </h3>
             <p>
-                TODO: Go through each test case and provide context on why the case exists.
+                Feel free to check out the tests cases I've created <a href="https://github.com/pmcavoy89/bubble-sort/blob/master/bubble-sort.spec.js">here</a>. I've written two that I think are important to test. Use the <code>npm test</code> command when you want to run the tests.
+            </p>
+            <p>
+                The first test just ensures that the array is correctly sorted from descending order into ascending order.
+            </p>
+            <ul>
+                <li>
+                    <b>Given</b>: a set of descending numbers; <code>10, 9, 8, 7, 6, 5, 4, 3, 2, 1</code>,
+                </li>
+                <li>
+                    <b>When</b>: <em>Bubble Sort</em> is called on the set of descending numbers,
+                </li>
+                <li>
+                    <b>Then</b>: the sorted set of numbers should be; <code>1, 2, 3, 4, 5, 6, 7, 8, 9, 10</code>.
+                </li>
+            </ul>
+            <p>
+                The second test I created is to ensure that if a number is bigger than a previous value that was swapped, that we still order it correctly. This ensures that we leave a value out of order.
+            </p>
+            <ul>
+                <li>
+                    <b>Given</b>: a set of descending numbers; <code>10, 9, 11, 7, 6, 5, 4, 3, 2, 1</code>,
+                </li>
+                <li>
+                    <b>When</b>: <em>Bubble Sort</em> is called on the set of numbers,
+                </li>
+                <li>
+                    <b>Then</b>: the sorted set of numbers should be; <code>1, 2, 3, 4, 5, 6, 7, 9, 10, 11</code>.
+                </li>
+            </ul>
+            <p>
+                As you can see, this ensures that even though 10 swapped with 9 but not swapped with 11 during our first pass, that we still get 10 at the second to last element in the list. 
+            </p>
+            <p>
+                Overall, the test cases for <em>Bubble Sort</em> are pretty simple.
             </p>
             <h3>
                 Big O(n)

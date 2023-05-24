@@ -6,6 +6,7 @@ Small project that demonstrates bubble sort. Check out the walkthrough [here](ht
 A list of commands can be found below to run. I give a short description of what each command does.
 
 * `npm start` - runs a sample sort using hardcoded values.
+* `npm test` - runs the tests to ensure the list is sorted.
 
 ## Features / ToDo
 
@@ -19,7 +20,7 @@ A list of commands can be found below to run. I give a short description of what
     - [ ] Code 
         - [x] Video walkthrough
         - [ ] Updated Video walkthrough
-    - [ ] Tests
+    - [x] Tests
         - [ ] Video walkthrough
     - [ ] Big O(n)
         - [ ] Video walkthrough

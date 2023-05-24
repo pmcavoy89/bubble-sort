@@ -22,7 +22,7 @@ This page also intends to help communicate my milestones and where I feel they a
     -  🟨 Code 
         - ✅ Video walkthrough
         - 🟨 Updated Video walkthrough
-    - 💭 Tests
+    - ✅ Tests
         - 💭 Video walkthrough
     - 💭 Big O(n)
         - 💭 Video walkthrough
