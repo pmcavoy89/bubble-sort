@@ -1,20 +1,18 @@
 site: Programming Pat
 
-url: https://bubble-sort.programmingpat.com
-baseurl:
+url: http://programmingpat.com
+baseurl: /bubble-sort
 collections:
   pages:
     output: true
     permalink: /:name
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
       layout: "default"
-  -
-    scope:
+  - scope:
       path: ""
       type: "pages"
     values:
@@ -25,7 +23,7 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-  
+
 sass:
   style: compressed
 
@@ -36,4 +34,4 @@ plugins:
 paginate: 6
 paginate_path: "/blog/page:num/"
 
-port: 4001  
+port: 4001
