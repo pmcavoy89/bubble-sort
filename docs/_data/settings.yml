@@ -3,21 +3,21 @@ basic_settings:
   favicon_image: 
 
 header_settings:
-  logo_image: 
+  logo_image: images/logo_personal.png
   logo_width: 200
 
 menu_settings:
   menu_items:
-    - title: 'Bubble Sort'
+    - title: 'Home'
       url: '/'
-    # - title: 'Blog'
-    #   url: '/blog/'
-    # - title: 'Projects'
-    #   url: '/projects'
-    - title: 'Features'
-      url: '/features'
-    # - title: 'Contact'
-    #   url: '/contact'
+    - title: 'Blog'
+      url: '/blog/'
+    - title: 'Projects'
+      url: '/projects'
+    - title: 'About'
+      url: '/about'
+    - title: 'Contact'
+      url: '/contact'
 
 footer_settings:
   footer_tagline: Let's get learning.
@@ -61,6 +61,7 @@ social_settings:
   spotify_url: ''
   bandcamp_url: ''
   linkedin_url: 'https://www.linkedin.com/in/pmca89/en'
+  hackerrank_url: 'https://www.hackerrank.com/pmca89'
 
 color_settings:
   background_color: '#ffffff'
