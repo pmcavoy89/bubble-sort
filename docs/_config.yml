@@ -1,7 +1,7 @@
 site: Programming Pat
 
 url: http://programmingpat.com
-baseurl:
+baseurl: /bubble-sort
 collections:
   pages:
     output: true
